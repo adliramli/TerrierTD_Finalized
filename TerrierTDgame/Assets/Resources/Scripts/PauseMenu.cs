@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     public static bool isPaused = false;
     public GameObject PauseMenuUI;
+    public GameObject QuitUI;
     // Update is called once per frame
     public SpriteRenderer sprite;
     public int sec;
@@ -15,6 +16,7 @@ public class PauseMenu : MonoBehaviour
     {
         sec = 0;
         PauseMenuUI.SetActive(false);
+        QuitUI.SetActive(false);
     }
 
     void Update()
@@ -35,6 +37,8 @@ public class PauseMenu : MonoBehaviour
     public void resume()
     {
         PauseMenuUI.SetActive(false);
+        QuitUI.SetActive(false);
+
         Time.timeScale = 1f;
         isPaused = false;
     }
@@ -42,14 +46,16 @@ public class PauseMenu : MonoBehaviour
     public void pause()
     {
         PauseMenuUI.SetActive(true);
+        QuitUI.SetActive(true);
+
         Time.timeScale = 0f;
         isPaused = true;
     }
 
     public void quit()
     {
-        SceneManager.LoadScene("StartScreen");
-
+        Time.timeScale = 1f;
+        isPaused = false;
 
     }
 
