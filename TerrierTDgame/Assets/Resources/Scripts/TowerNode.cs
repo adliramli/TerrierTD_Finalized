@@ -12,14 +12,14 @@ public class TowerNode : MonoBehaviour
     private Color StartColor;
     public GameObject PlacingTower;
 
-    void Start () 
-        {
-            rend = GetComponent<Renderer>();
-            StartColor = rend.material.color;
+    void Start()
+    {
+        rend = GetComponent<Renderer>();
+        StartColor = rend.material.color;
 
-        }
+    }
 
-    void OnMouseDown ()
+    void OnMouseDown()
     {
         if (turret != null)
         {
@@ -27,32 +27,38 @@ public class TowerNode : MonoBehaviour
             GameObject selectedTurret = BuildManager.instance.GetTurretToBuild();
             Turret selectedT = selectedTurret.GetComponent<Turret>(); //This is the prefab tower selected in between rounds
 
-            if (currentTurret.getId() == selectedT.getId() && currentTurret.level <= 2) {
+            if (currentTurret.getId() == selectedT.getId() && currentTurret.level <= 2)
+            {
                 currentTurret.Upgrade();
+                PlacingTower.SetActive(false);
             }
-            if (currentTurret.getId() == selectedT.getId() && currentTurret.level > 2) {
+            if (currentTurret.getId() == selectedT.getId() && currentTurret.level > 2)
+            {
                 Debug.Log("Cannot Upgrade any further");
+
             }
 
             return;
         }
-            if (BuildManager.instance.GetTurretToBuild() != null ) {
+        if (BuildManager.instance.GetTurretToBuild() != null)
+        {
             GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-            turret = (GameObject)Instantiate(turretToBuild, transform.position +positionOffset, transform.rotation);
+            turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
             rend.enabled = false;
+            PlacingTower.SetActive(false);
         }
 
-        PlacingTower.SetActive(false);
-    }
-    
-   void OnMouseEnter ()
-   {
-       rend.material.color = hoverColor;
-   }
 
-   void OnMouseExit ()
-   {
-       rend.material.color = StartColor;
-   }
+    }
+
+    void OnMouseEnter()
+    {
+        rend.material.color = hoverColor;
+    }
+
+    void OnMouseExit()
+    {
+        rend.material.color = StartColor;
+    }
 
 }
