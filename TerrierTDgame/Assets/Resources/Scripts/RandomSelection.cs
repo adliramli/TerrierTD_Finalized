@@ -29,10 +29,14 @@ public class RandomSelection : MonoBehaviour
     private float selectionTimer = 10f;
     public GameObject SelectionUI;
     public GameObject PlacingTower;
+    public GameObject PauseUI;
+    public GameObject QuitUI;
 
     void OnEnable()
     {
         PlacingTower.SetActive(false);
+        PauseUI.SetActive(false);
+        QuitUI.SetActive(false);
         TowerList();
         SetUpButtonImage(ref Button1, firsttower);
         SetUpButtonImage(ref Button2, secondtower);
@@ -43,6 +47,8 @@ public class RandomSelection : MonoBehaviour
     void OnDisable()
     {
         PlacingTower.SetActive(true);
+        PauseUI.SetActive(true);
+        QuitUI.SetActive(true);
     }
 
     void Update()
