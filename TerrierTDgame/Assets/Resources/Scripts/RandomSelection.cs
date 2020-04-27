@@ -94,42 +94,42 @@ public class RandomSelection : MonoBehaviour
     {
         // Just for an example, Tower types are denoted from type 1 to type 3
         int TowerNumber = RandNum();
-        if (TowerNumber > 0 && TowerNumber <= 200)  // Citgo for 20%
+        if (TowerNumber > 0 && TowerNumber <= 100)  // Citgo 
         {                                                     
             return 1;
 
         }
 
-        if (TowerNumber > 200 && TowerNumber <= 350) // Warren Tower for 15%
+        if (TowerNumber > 100 && TowerNumber <= 200) // Warren Tower 
         {                                            
             return 2;
         }
 
 
-        if (TowerNumber > 350 && TowerNumber <= 450) // Photonics Tower 10%
+        if (TowerNumber > 200 && TowerNumber <= 300) // Photonics 
         {                                            
             return 3;
         }
 
 
-        if (TowerNumber > 450 && TowerNumber <= 500) // PandaExpress 5%
+        if (TowerNumber > 300 && TowerNumber <= 500) // PandaExpress 
         {                                            
             return 4;
         }
 
 
-        if (TowerNumber > 500 && TowerNumber <= 600) // Kenmore Station 10%
+        if (TowerNumber > 500 && TowerNumber <= 550) // Kenmore Station 
         {                                            
             return 5;
         }
 
 
-        if (TowerNumber > 700 && TowerNumber <= 800) // Fenway Turret 10%
+        if (TowerNumber > 550 && TowerNumber <= 750) // Fenway Turret 
         {                                            
             return 6;
         }
 
-        if (TowerNumber > 800 && TowerNumber <= 900) // BrownStone 10%
+        if (TowerNumber > 750 && TowerNumber <= 900) // BrownStone 
         {                                            
             return 7;
         }

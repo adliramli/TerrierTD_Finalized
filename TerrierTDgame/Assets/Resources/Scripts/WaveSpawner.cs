@@ -20,7 +20,7 @@ public class WaveSpawner : MonoBehaviour
     //[SerializeField] Text SelectionTimerText2;
     public static int spawnchecker = 0;
 
-    private int waveNumber = 20; //Starting on high wave for testing
+    private int waveNumber = 1; //Starting on high wave for testing
 
     void Update () 
     {
