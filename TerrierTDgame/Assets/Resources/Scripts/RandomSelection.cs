@@ -88,48 +88,48 @@ public class RandomSelection : MonoBehaviour
     {
         // Just for an example, Tower types are denoted from type 1 to type 3
         int TowerNumber = RandNum();
-        if (TowerNumber > 0 && TowerNumber <= 200) //It's like saying this type of tower has 500 in 1000 chance of getting
-        {                                            // Or 50% chance
+        if (TowerNumber > 0 && TowerNumber <= 200)  // Citgo for 20%
+        {                                                     
             return 1;
 
         }
 
-        if (TowerNumber > 200 && TowerNumber <= 300) //It's like saying this type of tower has 300 in 1000 chance of getting
-        {                                            // Or 30% chance
+        if (TowerNumber > 200 && TowerNumber <= 350) // Warren Tower for 15%
+        {                                            
             return 2;
         }
 
 
-        if (TowerNumber > 300 && TowerNumber <= 400) //It's like saying this type of tower has 300 in 1000 chance of getting
-        {                                            // Or 30% chance
+        if (TowerNumber > 350 && TowerNumber <= 450) // Photonics Tower 10%
+        {                                            
             return 3;
         }
 
 
-        if (TowerNumber > 400 && TowerNumber <= 500) //It's like saying this type of tower has 300 in 1000 chance of getting
-        {                                            // Or 30% chance
+        if (TowerNumber > 450 && TowerNumber <= 500) // PandaExpress 5%
+        {                                            
             return 4;
         }
 
 
-        if (TowerNumber > 500 && TowerNumber <= 600) //It's like saying this type of tower has 300 in 1000 chance of getting
-        {                                            // Or 30% chance
+        if (TowerNumber > 500 && TowerNumber <= 600) // Kenmore Station 10%
+        {                                            
             return 5;
         }
 
 
-        if (TowerNumber > 700 && TowerNumber <= 800) //It's like saying this type of tower has 300 in 1000 chance of getting
-        {                                            // Or 30% chance
+        if (TowerNumber > 700 && TowerNumber <= 800) // Fenway Turret 10%
+        {                                            
             return 6;
         }
 
-        if (TowerNumber > 800 && TowerNumber <= 900) //It's like saying this type of tower has 300 in 1000 chance of getting
-        {                                            // Or 30% chance
+        if (TowerNumber > 800 && TowerNumber <= 900) // BrownStone 10%
+        {                                            
             return 7;
         }
 
-        else                    //It's like saying this type of tower has 200 in 1000 chance of getting
-        {                                            // Or 20% chance
+        else                    // Agganis Arena 10%
+        {                                            
             return 8;
         }
 
@@ -150,7 +150,6 @@ public class RandomSelection : MonoBehaviour
             thirdtower = TowerSelect();
         }
 
-        // And then scripts to select prefabs buildManager()
     }
 
     void SetUpButtonImage(ref Button Butt, int towernum) // function to setup the button
