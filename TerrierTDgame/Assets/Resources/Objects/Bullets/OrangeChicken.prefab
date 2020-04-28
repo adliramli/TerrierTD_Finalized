@@ -96,6 +96,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   splashRadius: 3
-  damage: 10
+  slowEffectDuration: 0
+  poisonEffectDamage: 0
+  damage: 3
   impactEffect: {fileID: 4458240161424192078, guid: b91ce191a962b2f4fbe5b227a095c319,
     type: 3}

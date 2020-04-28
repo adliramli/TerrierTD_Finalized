@@ -97,7 +97,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sprite: {fileID: 0}
   range: 10
-  fireRate: 20
+  fireRate: 7
   id: 7
   level: 1
   runnerTag: Runner
