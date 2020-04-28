@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754985440553830284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.288, y: -0.917, z: 0}
+  m_LocalPosition: {x: -0.288, y: -0.917, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,6 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 35
+  splashRadius: 0
+  slowEffectDuration: 0
+  poisonEffectDamage: 0
   damage: 1
   impactEffect: {fileID: 4458240161424192078, guid: b91ce191a962b2f4fbe5b227a095c319,
     type: 3}
